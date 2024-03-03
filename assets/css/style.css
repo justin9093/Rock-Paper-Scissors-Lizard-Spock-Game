@@ -10,7 +10,7 @@ body{
 
 /*headding*/
 
-.heading{
+header{
     text-align: center;
 }
 
@@ -46,21 +46,25 @@ footer{
     height: 40px;
 }
 
-#human{
+.human{
     background-color: lightgreen;
     float: left;
     width: 45%;
+    text-align: center;
 }
 
 #human-image{
     width: 75%;
 }
 
-#computer{
+.computer{
     background-color: black;
     float: right;
     width: 45%;
+    text-align: center;
+    color: white;
 }
+
 
 #computer-image{
     width: 75%;
