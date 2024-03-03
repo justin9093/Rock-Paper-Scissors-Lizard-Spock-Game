@@ -1,0 +1,67 @@
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+/*headding*/
+
+.heading{
+    text-align: center;
+}
+
+/*footer*/
+
+footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    min-height: 100px;
+    padding-top: 5px;
+    text-align: center;
+    color: black;
+    background-color: green;
+}
+
+/*gaming area*/
+
+.gaming-area{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.control {
+    display: inline-block;
+    margin: 2px;
+    width: 80px;
+    height: 40px;
+}
+
+#human{
+    background-color: lightgreen;
+    float: left;
+    width: 45%;
+}
+
+#human-image{
+    width: 75%;
+}
+
+#computer{
+    background-color: black;
+    float: right;
+    width: 45%;
+}
+
+#computer-image{
+    width: 75%;
+}

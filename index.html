@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1 class="headding">Rock, Paper, Scissors, Lizard, Spock</h1>
+    <header>
+    <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+    </header>
 
     <section id="game-area">
+        <div>
         <p>Chose your weapon:</p>
+        <button aria-label="rock" data-choice="0" class="control">Rock</button>
+        <button aria-label="paper" data-choice="1" class="control">Paper</button>
+        <button aria-label="scissors" data-choice="2" class="control">Scissors</button>
+        <button aria-label="lizard" data-choice="3" class="control">Lizard</button>
+        <button aria-label="Spock" data-choice="4" class="control">Spock</button>
+        </div>
         <div id="human">
-            <button data-type="human-rock" class="h-rock"><i class="fa-regular fa-hand-back-fist"></i></button>
-            <button data-type="human-scissors" class="h-scissors"><i class="fa-regular fa-hand-scissors"></i></button>
-            <button data-type="human-paper" class="h-paper"><i class="fa-regular fa-hand"></i></button>
-            <button data-type="human-lizard" class="h-lizard"><i class="fa-regular fa-hand-lizard"></i></button>
-            <button data-type="human-spock" class="h-spock"><i class="fa-regular fa-hand-spock"></i></button>
+            <h3 class="score">Your Score: <span id="player-score">0</span></h3>
+           <img id="human-image" src="assets/images/game-image.svg" alt="Image of rock, paper, scissors, lizard and Spock>
         </div>
 
         <div id="computer">
-            <button data-type="computer-rock" class="c-rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-            <button data-type="computer-scissors" class="c-scissors"><i class="fa-solid fa-hand-scissors"></i></button>
-            <button data-type="computer-paper" class="c-paper"><i class="fa-solid fa-hand"></i></button>
-            <button data-type="computer-lizard" class="c-lizard"><i class="fa-solid fa-hand-lizard"></i></button>
-            <button data-type="computer-spock" class="c-spock"><i class="fa-solid fa-hand-spock"></i></button>
+            <h3 class="score">Computer Score: <span id="computer-score">0</span></h3>
+            <img id="computer-image" src="assets/images/game-image.svg" alt="Image of rock, paper, scissors, lizard and Spock>
         </div>
 
     </section>
 
     <script src="assets/js/script.js"></script>
 </body>
+
+<footer class="rules">
+    <h2>Rules</h2>
+    <p class="rules-explained">Each hand signal wins against 2 of the other signals.
+        Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and rock crushes scissors.
+        Whoever throws the winning signal wins!
+    </p>
+</footer>
 </html>
