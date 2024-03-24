@@ -27,8 +27,8 @@ footer{
     min-height: 100px;
     padding-top: 5px;
     text-align: center;
-    color: black;
-    background-color: green;
+    color: white;
+    background-color: black;
 }
 
 /*gaming area*/
@@ -49,7 +49,7 @@ footer{
 }
 
 .human{
-    background-color: lightgreen;
+    background-color: blue;
     float: left;
     width: 45%;
     text-align: center;
@@ -60,7 +60,7 @@ footer{
 }
 
 .computer{
-    background-color: black;
+    background-color: blue;
     float: right;
     width: 45%;
     text-align: center;

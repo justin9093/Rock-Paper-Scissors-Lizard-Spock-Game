@@ -1,9 +1,13 @@
 const buttons = document.getElementsByClassName("control");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
-const playerImage = document.getElementById("player-image")
-const computerImage = document.getElementById("computer-score");
-const choices = ["rock, paper , scissors, lizard, spock"];
+const playerImage = document.getElementById("human-image");
+const computerImage = document.getElementById("computer-image");
+const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+const playerWinner = document.getElementById("winner")
+let playerPoints = 0;
+let computerPoints = 0;
+
 
 document.addEventListener("DOMContentLoaded", function(){
     for (let button of buttons) {
@@ -15,25 +19,49 @@ document.addEventListener("DOMContentLoaded", function(){
        
 })
 
-function playGame(){
-    
-    playerImage.src = `assets/images/${choices[playerChoice]}.png`;
+function playGame(playerChoice){
+
+    playerImage.src = `assets/images/${playerChoice}.png`;
     playerImage.alt = choices[playerChoice];
 
-    let computerChoice = Math.floor(Math.random() * 5);
+    const computerChoice = choices[Math.floor(Math.random() * 5)];
 
-    computerImage.scr = `assets/images/${choices[computerChoice]}.png`;
+    computerImage.src = `assets/images/${computerChoice}.png`;
     computerImage.alt = choices[computerChoice];
+    let result = "";
 
-    let result = checkWinner(choices[computerChoice], choices[playerChoice]);
+    if(playerChoice === computerChoice){
+        result = "IT'S A TIE";
+    }
+    else{
+        switch(playerChoice){
+            case "rock":
+                result = (computerChoice === ("scissors", "lizard")) ? "YOU WIN!" : "YOU LOOSE";
+                break;
+            case "paper":
+                result = (computerChoice === ("rock", "spock")) ? "YOU WIN!" : "YOU LOOSE";
+                break;
+            case "scissors":
+                result = (computerChoice === ("paper", "lizard")) ? "YOU WIN!" : "YOU LOOSE";
+                break;
+            case "lizard":
+                result = (computerChoice === ("paper", "spock")) ? "YOU WIN!" : "YOU LOOSE";
+                break;
+            case "spock":
+                result = (computerChoice === ("scissors", "rock")) ? "YOU WIN!" : "YOU LOOSE";
+                break;
+        }
+    }
+    playerWinner.textContent = result;
 
-    updateScore(result);
-}
-
-function checkWinner(){
-
-}
-
-function updateScore(){
-
+    switch(result){
+        case "YOU WIN!":
+            playerPoints++;
+            playerScore.textContent = playerPoints;
+            break;
+        case "YOU LOOSE":
+            computerPoints++;
+            computerScore.textContent = computerPoints;
+            break;
+    }
 }
